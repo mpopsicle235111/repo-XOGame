@@ -8,11 +8,12 @@
 
 import Foundation
 
+/// This class stores the current state of the game board - where the Xses and Os are placed
 public final class Gameboard {
     
     // MARK: - Properties
     
-    private lazy var positions: [[Player?]] = initialPositions()
+    public lazy var positions: [[Player?]] = initialPositions()
     
     // MARK: - public
     
@@ -21,8 +22,17 @@ public final class Gameboard {
     }
     
     public func clear() {
-        self.positions = initialPositions()
-    }
+        
+        positions = initialPositions()
+            
+        }
+    
+    public func printPositions() {
+        print("Positions filled:")
+        print(positions)
+        }
+        
+    
     
     public func contains(player: Player, at positions: [GameboardPosition]) -> Bool {
         for position in positions {
@@ -45,7 +55,9 @@ public final class Gameboard {
         for _ in 0 ..< GameboardSize.columns {
             let rows = Array<Player?>(repeating: nil, count: GameboardSize.rows)
             positions.append(rows)
+            
         }
         return positions
     }
+    
 }

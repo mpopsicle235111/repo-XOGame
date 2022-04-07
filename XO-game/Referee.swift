@@ -39,7 +39,7 @@ public final class Referee {
         }
         return nil
     }
-    
+    //These are the functions that check for all possible winning combinations
     // MARK: - Private
     
     private func generateWinsByColumn(result: inout [[GameboardPosition]]) {
@@ -82,8 +82,10 @@ public final class Referee {
         result.append(array)
     }
     
-    private func doesPlayerHaveWinningCombination(_ player: Player) -> Bool {
-        for winningPositions in winningCombinations {
+    //If some winning combination is confirmed,
+    //this func returns a winning player
+    public func doesPlayerHaveWinningCombination(_ player: Player) -> Bool {
+         for winningPositions in winningCombinations {
             if gameboard.contains(player: player, at: winningPositions) {
                 return true
             }

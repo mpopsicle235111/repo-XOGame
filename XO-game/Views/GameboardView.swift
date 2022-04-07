@@ -12,7 +12,7 @@ import UIKit
 public class GameboardView: UIView {
     
     // MARK: - Public Properties
-    
+    //Here we receive location data from GameViewController
     public var onSelectPosition: ((GameboardPosition) -> Void)?
     
     public private(set) var markViewForPosition: [GameboardPosition: MarkView] = [:]
@@ -71,11 +71,13 @@ public class GameboardView: UIView {
     }
     
     // MARK: - Touch Handling
-    
+    //This func receives touch event from user
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //We get the touch location
         guard let touchLocation = touches.first?.location(in: self) else { return }
-        let position = GameboardPosition(column: determineColumn(for: touchLocation),
-                                         row: determineRow(for: touchLocation))
+        //Then we check, which column and row does this location fit in
+        let position = GameboardPosition(column: determineColumn(for: touchLocation), row: determineRow(for: touchLocation))
+        //and finally return this position to controller
         onSelectPosition?(position)
     }
     

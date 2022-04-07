@@ -11,11 +11,13 @@ import Foundation
 public enum Player: CaseIterable {
     case first
     case second
+    case computerAI
     
     var next: Player {
         switch self {
         case .first: return .second
         case .second: return .first
+        case .computerAI: return .first
         }
     }
 }
