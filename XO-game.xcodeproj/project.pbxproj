@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1BA7A627F2721100F84199 /* StartingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1BA7A527F2721100F84199 /* StartingScreenViewController.swift */; };
+		DB1BA7AA27F279B900F84199 /* OpponentSelectionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1BA7A927F279B900F84199 /* OpponentSelectionStrategy.swift */; };
+		DB1BA7AC27F279CB00F84199 /* GameTypeSelectionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1BA7AB27F279CB00F84199 /* GameTypeSelectionStrategy.swift */; };
+		DB68AE2D27EE68DD00DD0858 /* PlayerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB68AE2C27EE68DD00DD0858 /* PlayerInputState.swift */; };
+		DBC1DBAE27EFD130007BC706 /* GameEndState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC1DBAD27EFD130007BC706 /* GameEndState.swift */; };
 		F874E4712224621100364CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F874E4702224621100364CAE /* AppDelegate.swift */; };
 		F874E4732224621100364CAE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F874E4722224621100364CAE /* GameViewController.swift */; };
 		F874E4762224621100364CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F874E4742224621100364CAE /* Main.storyboard */; };
@@ -24,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB1BA7A527F2721100F84199 /* StartingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenViewController.swift; sourceTree = "<group>"; };
+		DB1BA7A927F279B900F84199 /* OpponentSelectionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentSelectionStrategy.swift; sourceTree = "<group>"; };
+		DB1BA7AB27F279CB00F84199 /* GameTypeSelectionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeSelectionStrategy.swift; sourceTree = "<group>"; };
+		DB68AE2C27EE68DD00DD0858 /* PlayerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputState.swift; sourceTree = "<group>"; };
+		DBC1DBAD27EFD130007BC706 /* GameEndState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndState.swift; sourceTree = "<group>"; };
 		F874E46D2224621100364CAE /* XO-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XO-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F874E4702224621100364CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F874E4722224621100364CAE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +63,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB1BA7A427F271E600F84199 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F874E4722224621100364CAE /* GameViewController.swift */,
+				DB1BA7A527F2721100F84199 /* StartingScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DB1BA7A827F2799000F84199 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				DB1BA7A927F279B900F84199 /* OpponentSelectionStrategy.swift */,
+				DB1BA7AB27F279CB00F84199 /* GameTypeSelectionStrategy.swift */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		DBC1DBAF27EFD150007BC706 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				DB68AE2C27EE68DD00DD0858 /* PlayerInputState.swift */,
+				DBC1DBAD27EFD130007BC706 /* GameEndState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
 		F874E4642224621100364CAE = {
 			isa = PBXGroup;
 			children = (
@@ -73,8 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				F874E4702224621100364CAE /* AppDelegate.swift */,
-				F874E4722224621100364CAE /* GameViewController.swift */,
 				F874E4F02225DFF700364CAE /* Referee.swift */,
+				DB1BA7A427F271E600F84199 /* ViewControllers */,
+				DB1BA7A827F2799000F84199 /* Strategy */,
 				F874E4E62225CB3F00364CAE /* Models */,
 				F874E4E52225CB3100364CAE /* Views */,
 				F874E4772224621300364CAE /* Assets.xcassets */,
@@ -107,6 +145,7 @@
 		F874E4E62225CB3F00364CAE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DBC1DBAF27EFD150007BC706 /* States */,
 				F874E4DC2225C25D00364CAE /* GameboardPosition.swift */,
 				F874E4F22225E0B100364CAE /* GameboardSize.swift */,
 				F874E4F42225E2CD00364CAE /* Gameboard.swift */,
@@ -192,11 +231,16 @@
 				F874E4F12225DFF700364CAE /* Referee.swift in Sources */,
 				F874E4F52225E2CD00364CAE /* Gameboard.swift in Sources */,
 				F874E4712224621100364CAE /* AppDelegate.swift in Sources */,
+				DBC1DBAE27EFD130007BC706 /* GameEndState.swift in Sources */,
 				F874E4E22225CABF00364CAE /* OView.swift in Sources */,
 				F874E4F32225E0B100364CAE /* GameboardSize.swift in Sources */,
 				F874E4E42225CB0700364CAE /* XView.swift in Sources */,
+				DB1BA7AA27F279B900F84199 /* OpponentSelectionStrategy.swift in Sources */,
+				DB1BA7A627F2721100F84199 /* StartingScreenViewController.swift in Sources */,
 				F874E4DB2225C1AC00364CAE /* GameboardView.swift in Sources */,
 				F874E4EF2225DE4500364CAE /* Player.swift in Sources */,
+				DB68AE2D27EE68DD00DD0858 /* PlayerInputState.swift in Sources */,
+				DB1BA7AC27F279CB00F84199 /* GameTypeSelectionStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
